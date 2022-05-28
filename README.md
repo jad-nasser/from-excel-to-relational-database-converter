@@ -131,7 +131,7 @@ In order the 2NF relational matrix to be completed the algorithm will compare ev
 | **s1234**     | sunglasses 1    | c1234       | Mark       | Smith     | 1                |
 | **s1234**     | sunglasses 1    | c2345       | Peter      | Parker    | 3                |
 
-We started comparing the two rows above with each other by starting from sunglasses_id column and in this case the two sunglasses_id values are equal so we keep the sunglasses_id values marked and we start comparing the other column value.
+We started comparing the two rows above with each other by starting from sunglasses_id column and in this case the two sunglasses_id values are equal so we keep the sunglasses_id values marked and we start comparing all the other column values.
 
 <br>
 
@@ -185,7 +185,7 @@ Now after comparing all the columns we remove the marking from sunglasses_id val
 | s1234         | sunglasses 1    | **c1234**   | Mark       | Smith     | 1                |
 | s1234         | sunglasses 1    | **c2345**   | Peter      | Parker    | 3                |
 
-Now after comparing all the columns we remove the marking from sunglasses_name values to customer_id values but here the two customer_id values are different so we remove the instantly from the customer_id values to the next column values.
+Now after comparing all the columns we remove the marking from sunglasses_name values to customer_id values but here the two customer_id values are different so we remove the marking instantly from the customer_id values to the next column values.
 
 <br>
 
@@ -194,7 +194,7 @@ Now after comparing all the columns we remove the marking from sunglasses_name v
 | s1234         | sunglasses 1    | c1234       | **Mark**   | **Smith**  | **1**            |
 | s1234         | sunglasses 1    | c2345       | **Peter**  | **Parker** | **3**            |
 
-The same as happened above for customer_id column they are all different an nothing will happen.
+The same as happened above for customer_id column they are all different and nothing will happen, and then the comparison process of that two rows is completed.
 
 <br>
 
@@ -286,7 +286,7 @@ After selecting the Excel file the page will change and a new page will appear t
 
 You can click the "Back" button to go to the previous page and select another Excel file
 
-Click the "Browse" button and a file chooser will apear, choose the location you need the queries file to be created, then type any name you need for that file and click "save" button in the file chooser. In our example we select named the file "result.sql".
+Click the "Browse" button and a file chooser will apear, choose the location you need the queries file to be created, then type any name you need for that file and click "save" button in the file chooser. In our example we named the file "result.sql".
 
 After clicking the save button wait few second and if the Excel file data is in a good form a message box will appear above the page that says "The file successfully created".
 
@@ -302,11 +302,11 @@ Now open the created file in SQL Server program, our created result.sql file is 
 
 **Note**: tables are named based on their column position in the Excel file not based on their number so thats why in the image above we have "table0" and "table2" but don't have "table1".
 
-Now in order to create the relational database, execute the file by clicking the execute button in the SQL Server program. After the file is successfully executed the SQL Server program will show a success message in the bottom like the image below.
+Now in order to create the relational database, execute the file in the SQL Server program. After the file is successfully executed the SQL Server program will show a success message in the bottom like the image below.
 
 ![Success queries execution](./images/success-queries-execution.png "Success queries execution")
 
-In our example the created relational database from "example-sheet.xlsx" Excel file is shown in the image below.
+In our example the created 2NF relational database from "example-sheet.xlsx" Excel file is shown in the image below.
 
 ![Database diagram](./images/database-diagram.png "Database diagram")
 
